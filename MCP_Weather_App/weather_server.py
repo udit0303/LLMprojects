@@ -2,7 +2,7 @@ import os
 import requests
 from mcp.server.fastmcp import FastMCP
 
-OPENWEATHERMAP_API_KEY = os.environ.get("OPENWEATHERMAP_API_KEY", "")
+OPENWEATHERMAP_API_KEY = "<<INSERT OPEN WEATHER KEY>>"
 
 # Initialize the FastMCP server
 mcp = FastMCP("WeatherAssistant")

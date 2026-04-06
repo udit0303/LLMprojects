@@ -32,7 +32,7 @@ async def create_graph(session):
     tools = await load_mcp_tools(session)
 
     # LLM configuration
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0, google_api_key="AIzaSyBB-AF3x7E7AFbCble9krP0lUFxBSezli0")
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0, google_api_key="<<INSERT GOOGLE KEY>>")
     llm_with_tools = llm.bind_tools(tools)
 
     # Prompt template with user/assistant chat only
