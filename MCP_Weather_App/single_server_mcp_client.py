@@ -1,4 +1,5 @@
 import asyncio
+import os
 import shlex
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
@@ -10,7 +11,7 @@ from langgraph.prebuilt import tools_condition, ToolNode
 from typing import Annotated, List
 from typing_extensions import TypedDict
 
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 from langchain_mcp_adapters.tools import load_mcp_tools
@@ -32,7 +33,7 @@ async def create_graph(session):
     tools = await load_mcp_tools(session)
 
     # LLM configuration
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0, google_api_key="<<INSERT GOOGLE KEY>>")
+    llm = ChatAnthropic(model="claude-sonnet-4-6", temperature=0, api_key=os.environ.get("ANTHROPIC_API_KEY"))
     llm_with_tools = llm.bind_tools(tools)
 
     # Prompt template with user/assistant chat only

@@ -20,7 +20,17 @@ Welcome to my collection of Large Language Model (LLM) projects. This repository
   - **Client:** A LangGraph agent that autonomously reasons and calls tools.
   - **Decoupled Architecture:** Client logic is separated from tool implementation.
 
-### 3. [Streamlit Example](./StreamListExample1)
+### 3. [MCP Weather App](./MCP_Weather_App)
+**Goal:** Build a multi-server MCP agentic system with weather and task management capabilities.
+- **Tech Stack:** Python, LangGraph, FastMCP, Claude (Anthropic), OpenWeatherMap API.
+- **Key Features:**
+  - **Two MCP Servers:** A weather server and a task management server, each exposing tools, prompts, and resources.
+  - **Single-server client:** LangGraph agent (Claude) connected to the weather server only.
+  - **Multi-server client:** LangGraph agent (Claude) connected to both servers via `MultiServerMCPClient`.
+  - **All three MCP primitives:** Tools (get weather, manage tasks), Prompts (compare cities, plan trips), Resources (delivery log, meeting notes).
+  - **Persistent tasks:** Task list stored in a plain text file across sessions.
+
+### 4. [Streamlit Example](./StreamListExample1)
 **Goal:** demonstrate rapid prototyping of AI interfaces.
 - **Tech Stack:** Streamlit, Python.
 - **Key Features:**
@@ -35,7 +45,7 @@ Each project is self-contained. Navigate to a folder to see its specific `README
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/LLMProjects.git
+git clone https://github.com/udit0303/LLMprojects.git
 
 # Navigate to a project
 cd LLMProjects/MCP

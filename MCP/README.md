@@ -233,7 +233,7 @@ Before running the client, you must configure your OpenAI API key.
 3.  Replace the `openai_api_key` value with your actual OpenAI API key, or better yet, use an environment variable:
 
     ```python
-    # In mcp_client.py
+    # In single_server_mcp_client.py
     import os
 
     # ...
@@ -252,7 +252,7 @@ Before running the client, you must configure your OpenAI API key.
 To start the agent, run the client script. The client will automatically start the MCP server as a subprocess.
 
 ```bash
-python mcp_client.py
+python single_server_mcp_client.py
 ```
 
 Once started, you will see a prompt:

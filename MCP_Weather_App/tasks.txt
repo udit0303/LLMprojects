@@ -1,0 +1,10 @@
+Day 2 - NYC Trip: Stroll through Central Park
+Day 2 - NYC Trip: Visit the Metropolitan Museum of Art
+Day 1 - NYC Trip: Take a Statue of Liberty & Ellis Island tour
+Day 1 - NYC Trip: Explore Times Square at night
+Day 3 - NYC Trip: Visit the 9/11 Memorial & Museum
+Day 3 - NYC Trip: Walk across the Brooklyn Bridge
+Dani: Prototype a visual progress tracker for module pages in the AI for Beginners course – due next week
+Jenna: Draft 2–3 motivational nudge email templates for A/B testing (mid-week push/email reminders)
+Arjun: Design a lightweight "quick recap" section before quizzes to test if it improves retention (Data Science Foundations course)
+Lisa: Identify and flag users who are inactive for 5+ days but have not yet dropped, to experiment with re-engagement strategies
