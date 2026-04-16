@@ -30,7 +30,17 @@ Welcome to my collection of Large Language Model (LLM) projects. This repository
   - **All three MCP primitives:** Tools (get weather, manage tasks), Prompts (compare cities, plan trips), Resources (delivery log, meeting notes).
   - **Persistent tasks:** Task list stored in a plain text file across sessions.
 
-### 4. [Streamlit Example](./StreamListExample1)
+### 4. [RAG MCP](./RAG_MCP)
+**Goal:** Expose retrieval-augmented generation (RAG) as a reusable MCP capability — let a Claude-powered agent ingest documents and answer questions grounded in them.
+- **Tech Stack:** Python, LangGraph, FastMCP, Claude (Anthropic), OpenAI Embeddings, Chroma.
+- **Key Features:**
+  - **MCP server:** Two tools — `ingest_document` (chunks, embeds, persists) and `query_rag_store` (top-K similarity search).
+  - **LangGraph agent (Claude Sonnet 4.6):** Same chat-node → tool-node loop as the weather agent — MCP decouples the agent from capability.
+  - **Cross-provider design:** Claude for chat, OpenAI `text-embedding-3-small` for vectors (Anthropic has no embeddings API).
+  - **Persistent Chroma store:** Ingested knowledge survives restarts.
+  - **`.env` driven config:** `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` loaded via `python-dotenv`.
+
+### 5. [Streamlit Example](./StreamListExample1)
 **Goal:** demonstrate rapid prototyping of AI interfaces.
 - **Tech Stack:** Streamlit, Python.
 - **Key Features:**
