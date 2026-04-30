@@ -40,7 +40,17 @@ Welcome to my collection of Large Language Model (LLM) projects. This repository
   - **Persistent Chroma store:** Ingested knowledge survives restarts.
   - **`.env` driven config:** `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` loaded via `python-dotenv`.
 
-### 5. [Streamlit Example](./StreamListExample1)
+### 5. [Image Research Assistant](./ImageAssistant)
+**Goal:** Build a multi-server MCP agent with a web UI that analyzes uploaded images and chains the result into Wikipedia research.
+- **Tech Stack:** Python, LangGraph, FastMCP, Claude Sonnet 4.6 + Haiku 4.5 (Anthropic), Gradio, Wikipedia.
+- **Key Features:**
+  - **Two MCP servers:** `visual_analysis_server.py` (vision via Claude Haiku 4.5) and `wikipedia_server.py` (Wikipedia search).
+  - **Tool chaining:** The agent describes an image, then uses the description as a Wikipedia query — all in one user turn.
+  - **Two-tier model use:** Sonnet 4.6 for reasoning/tool selection, Haiku 4.5 for vision — cheap and fast where it matters.
+  - **Gradio web UI:** Image upload + chat in a browser, with a Quit button that shuts the process down cleanly.
+  - **Server-side image processing:** Base64 stays inside the MCP server, never crossing the LLM context — keeps token usage lean.
+
+### 6. [Streamlit Example](./StreamListExample1)
 **Goal:** demonstrate rapid prototyping of AI interfaces.
 - **Tech Stack:** Streamlit, Python.
 - **Key Features:**
