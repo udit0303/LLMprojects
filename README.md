@@ -57,6 +57,16 @@ Welcome to my collection of Large Language Model (LLM) projects. This repository
   - Simple, interactive UI components.
   - boilerplate patterns for LLM chat interfaces.
 
+### 7. [Project Management Tool (Agentic Workflow)](./Project_Mangement_Tool)
+**Goal:** Build a reusable library of AI agents, then compose them into a multi-agent workflow that turns a product spec into a structured development plan (personas → user stories → features → engineering tasks).
+- **Tech Stack:** Python, Claude (Anthropic), OpenAI Embeddings.
+- **Key Features:**
+  - **Phase 1 — agent library:** Seven reusable agent classes (DirectPrompt, AugmentedPrompt, KnowledgeAugmentedPrompt, RAGKnowledgePrompt, Evaluation, Routing, ActionPlanning), each with a standalone test script.
+  - **Phase 2 — agentic workflow:** Action planning → embedding-based routing → specialist agents (Product Manager / Program Manager / Development Engineer), each validated by an `EvaluationAgent` loop.
+  - **Context chaining:** Each step builds on prior validated output, keeping the plan grounded in the real product spec.
+  - **Bounded generation:** Deterministic final compile (assembled in code) and per-user-story task generation so no single model call ever truncates.
+  - **Cross-provider design:** Claude for all reasoning, OpenAI only for embeddings (routing + RAG).
+
 ---
 
 ## 🚀 Getting Started
