@@ -75,10 +75,10 @@ Each project is self-contained. Navigate to a folder to see its specific `README
 
 ```bash
 # Clone the repo
-git clone https://github.com/udit0303/LLMprojects.git
+git clone https://github.com/udit0303/llm-agents-lab.git
 
 # Navigate to a project
-cd LLMProjects/MCP
+cd llm-agents-lab/MCP
 # Follow instructions in MCP/README.md
 ```
 
